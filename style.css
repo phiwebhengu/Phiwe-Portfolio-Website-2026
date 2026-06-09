@@ -60,7 +60,6 @@ a:hover {
 
 .logo {
   font-size: 2rem;
-  font-weight: bold;
 }
 
 .logo:hover {
@@ -205,4 +204,11 @@ section {
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+/* Icons */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
 }
