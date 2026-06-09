@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Phiwe Bhengu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main>
+
+    <!-- Page Header -->
+    <div class="page-hero">
+      <div class="container">
+        <p class="overline">Browse My Work</p>
+        <h1>Projects</h1>
+      </div>
+    </div>
+
+    <section class="page-section">
+      <div class="container">
+
+        <!-- Filter Bar (Interaction 2) -->
+        <div class="filter-bar" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="game-design">Game Design</button>
+          <button class="filter-btn" data-filter="web-dev">Web Dev</button>
+          <button class="filter-btn" data-filter="digital-art">Digital Art</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="project-grid" id="project-grid">
+
+          <!-- Project 1 -->
+          <div class="project-card" data-category="game-design">
+            <img
+              src="./Assets/Project 1.png"
+              alt="A Very Simple Platformer"
+              class="card-image lightbox-trigger"
+            />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Game Design</span>
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+              </div>
+              <h3>A Very Simple Platformer</h3>
+              <p>
+                A complete 2D platformer built in Unity with custom player physics,
+                level design, and original game mechanics written entirely in C#.
+              </p>
+              <div class="card-actions">
+                <a href="project-detail.html" class="btn btn-outline btn-sm">Case Study</a>
+                <a
+                  href="https://mzati0.itch.io/a-very-simple-platformer"
+                  class="btn btn-primary btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                >Itch.io</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-category="game-design digital-art">
+            <img
+              src="./Assets/Project 2.jpeg"
+              alt="The Bogs Woods"
+              class="card-image lightbox-trigger"
+            />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Game Design</span>
+                <span class="tag">Narrative</span>
+                <span class="tag">Digital Art</span>
+              </div>
+              <h3>The Bogs Woods</h3>
+              <p>
+                A narrative-driven game experience with original character design,
+                world-building, and interactive storytelling mechanics.
+              </p>
+              <div class="card-actions">
+                <a
+                  href="https://mzati0.itch.io/the-bogs-woods"
+                  class="btn btn-primary btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                >Itch.io</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-category="game-design">
+            <img
+              src="./Assets/Project 3.png"
+              alt="Platformer Prototype"
+              class="card-image lightbox-trigger"
+            />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Game Design</span>
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+              </div>
+              <h3>Platformer Prototype</h3>
+              <p>
+                A rapid prototype demonstrating core platformer mechanics,
+                collision detection logic, and enemy AI scripting in Unity.
+              </p>
+              <div class="card-actions">
+                <a
+                  href="https://github.com/phiwebhengu/DIGA3001A---Game-Design-IIIA-2026-SM1.git"
+                  class="btn btn-primary btn-sm"
+                  target="_blank"
+                  rel="noopener"
+                >GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Empty state -->
+        <p
+          id="no-results"
+          style="display:none; text-align:center; color:var(--muted); margin-top:2rem;"
+        >
+          No projects found in this category yet.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal / Lightbox -->
+  <div class="modal-overlay" id="modal-overlay">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <img src="" alt="" class="modal-content" id="modal-img" />
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>
