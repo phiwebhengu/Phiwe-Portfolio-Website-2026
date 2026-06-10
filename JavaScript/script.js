@@ -12,6 +12,9 @@
    ============================================================ */
 function buildNav() {
   const page = window.location.pathname.split("/").pop() || "index.html";
+  const isRootPage = !window.location.pathname.includes("/HTML/");
+  const linkPrefix = isRootPage ? "HTML/" : "";
+  const homeHref = isRootPage ? "index.html" : "../index.html";
 
   const links = [
     { href: "index.html", label: "Home" },
@@ -21,23 +24,25 @@ function buildNav() {
   ];
 
   const desktopItems = links
-    .map(
-      (l) =>
-        `<li><a href="${l.href}" class="${page === l.href ? "active" : ""}">${l.label}</a></li>`,
-    )
+    .map((l) => {
+      const href =
+        l.href === "index.html" ? homeHref : `${linkPrefix}${l.href}`;
+      return `<li><a href="${href}" class="${page === l.href ? "active" : ""}">${l.label}</a></li>`;
+    })
     .join("");
 
   const mobileItems = links
-    .map(
-      (l) =>
-        `<li><a href="${l.href}" onclick="closeMenu()">${l.label}</a></li>`,
-    )
+    .map((l) => {
+      const href =
+        l.href === "index.html" ? homeHref : `${linkPrefix}${l.href}`;
+      return `<li><a href="${href}" onclick="closeMenu()">${l.label}</a></li>`;
+    })
     .join("");
 
   return `
     <nav>
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Phiwe Bhengu</a>
+        <a href="${homeHref}" class="nav-logo">Phiwe Bhengu</a>
         <ul class="nav-links">${desktopItems}</ul>
         <div class="hamburger-icon" id="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle menu">
           <span></span><span></span><span></span>
@@ -51,15 +56,19 @@ function buildNav() {
 }
 
 function buildFooter() {
+  const isRootPage = !window.location.pathname.includes("/HTML/");
+  const linkPrefix = isRootPage ? "HTML/" : "";
+  const homeHref = isRootPage ? "index.html" : "../index.html";
+
   return `
     <footer>
       <div class="footer-inner">
         <span class="footer-logo">Phiwe Bhengu</span>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="${homeHref}">Home</a></li>
+          <li><a href="${linkPrefix}about.html">About</a></li>
+          <li><a href="${linkPrefix}projects.html">Projects</a></li>
+          <li><a href="${linkPrefix}contact.html">Contact</a></li>
         </ul>
         <p class="footer-copy">&#169; 2026 Phiwe Bhengu. All Rights Reserved.</p>
       </div>
