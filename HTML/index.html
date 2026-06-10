@@ -1,194 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phiwe Bhengu — Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <div id="nav-placeholder"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phiwe Bhengu — Portfolio</title>
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="../CSS/mediaqueries.css" />
+</head>
+<body>
 
-    <main>
-      <!-- ===== HERO ===== -->
-      <section class="hero">
-        <div class="hero-inner">
-          <div class="hero-text">
-            <p class="label">Hello, I'm</p>
-            <h1>Phiwe Bhengu</h1>
-            <p class="subtitle">Game Designer &amp; Frontend Developer</p>
-            <p class="bio">
-              BA Digital Arts student at the University of the Witwatersrand,
-              building interactive digital experiences from the ground up. I
-              design games, write clean vanilla code, and engineer solutions
-              across the full digital lifecycle.
-            </p>
-            <div class="hero-actions">
-              <button
-                class="btn btn-primary"
-                onclick="window.open('./Assets/Phiwe CV.pdf')"
-              >
-                Download CV
-              </button>
-              <a href="projects.html" class="btn btn-outline">View Projects</a>
-            </div>
-            <div class="hero-socials">
-              <img
-                src="./Assets/linkedin.png"
-                alt="LinkedIn"
-                class="icon"
-                onclick="
-                  location.href = 'https://www.linkedin.com/in/phiwebhengu/'
-                "
-              />
-              <img
-                src="./Assets/github.png"
-                alt="GitHub"
-                class="icon"
-                onclick="location.href = 'https://github.com/phiwebhengu'"
-              />
-            </div>
+  <div id="nav-placeholder"></div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="label">Hello, I'm</p>
+          <h1>Phiwe Bhengu</h1>
+          <p class="subtitle">Game Designer &amp; Frontend Developer</p>
+          <p class="bio">
+            BA Digital Arts student at the University of the Witwatersrand,
+            building interactive digital experiences from the ground up.
+            I design games, write clean vanilla code, and engineer
+            solutions across the full digital lifecycle.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="window.open('../Assets/Phiwe CV.pdf')">
+              Download CV
+            </button>
+            <a href="projects.html" class="btn btn-outline">View Projects</a>
           </div>
-          <div class="hero-image">
-            <img src="./Assets/Profile Pic 2.jpeg" alt="Phiwe Bhengu" />
+          <div class="hero-socials">
+            <img src="../Assets/linkedin.png" alt="LinkedIn" class="icon"
+              onclick="location.href='https://www.linkedin.com/in/phiwebhengu/'" />
+            <img src="../Assets/github.png" alt="GitHub" class="icon"
+              onclick="location.href='https://github.com/phiwebhengu'" />
           </div>
         </div>
-      </section>
-
-      <!-- ===== FEATURED PROJECTS — all 3, centred ===== -->
-      <section class="featured">
-        <div class="container">
-          <div class="section-header">
-            <p class="overline">Selected Work</p>
-            <h2>Featured Projects</h2>
-          </div>
-
-          <div class="project-grid featured-three">
-            <!-- Project 1 — A Very Simple Platformer -->
-            <div class="project-card">
-              <img
-                src="./Assets/Project 1.png"
-                alt="A Very Simple Platformer"
-                class="card-image lightbox-trigger"
-              />
-              <div class="card-body">
-                <div class="card-tags">
-                  <span class="tag">Game Jam</span>
-                  <span class="tag">Unity</span>
-                  <span class="tag">C#</span>
-                </div>
-                <h3>A Very Simple Platformer</h3>
-                <p>
-                  A 2D platformer built in 48 hours for the ARCADEMIA 2026 Game
-                  Jam. We won First Place across five international
-                  universities.
-                </p>
-                <div class="card-actions">
-                  <a href="project-detail.html" class="btn btn-outline btn-sm"
-                    >Case Study</a
-                  >
-                  <a
-                    href="https://mzati0.itch.io/a-very-simple-platformer"
-                    class="btn btn-primary btn-sm"
-                    target="_blank"
-                    rel="noopener"
-                    >Itch.io</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 2 — The Bogs Woods -->
-            <div class="project-card">
-              <img
-                src="./Assets/Project 2.jpeg"
-                alt="The Bogs Woods"
-                class="card-image lightbox-trigger"
-              />
-              <div class="card-body">
-                <div class="card-tags">
-                  <span class="tag">Game Design</span>
-                  <span class="tag">Hack &amp; Slash</span>
-                  <span class="tag">Unity</span>
-                </div>
-                <h3>The Bogs Woods</h3>
-                <p>
-                  A single-player hack-and-slash adventure through a
-                  supernatural world. Help Otto and Ruri recover shattered soul
-                  fragments across the Celestial lands.
-                </p>
-                <div class="card-actions">
-                  <a
-                    href="project-detail-bogs.html"
-                    class="btn btn-outline btn-sm"
-                    >Case Study</a
-                  >
-                  <a
-                    href="https://mzati0.itch.io/the-bogs-woods"
-                    class="btn btn-primary btn-sm"
-                    target="_blank"
-                    rel="noopener"
-                    >Itch.io</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 3 — Platformer Prototype -->
-            <div class="project-card">
-              <img
-                src="./Assets/Project 3.png"
-                alt="Platformer Prototype"
-                class="card-image lightbox-trigger"
-              />
-              <div class="card-body">
-                <div class="card-tags">
-                  <span class="tag">Game Design</span>
-                  <span class="tag">Unity</span>
-                  <span class="tag">C#</span>
-                </div>
-                <h3>Platformer Prototype</h3>
-                <p>
-                  A class assignment prototype demonstrating enemy AI, patrol
-                  logic, and player interaction systems built from scratch in
-                  Unity.
-                </p>
-                <div class="card-actions">
-                  <a
-                    href="project-detail-prototype.html"
-                    class="btn btn-outline btn-sm"
-                    >Case Study</a
-                  >
-                  <a
-                    href="https://github.com/phiwebhengu/DIGA3001A---Game-Design-IIIA-2026-SM1.git"
-                    class="btn btn-primary btn-sm"
-                    target="_blank"
-                    rel="noopener"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="text-align: center; margin-top: 2.5rem">
-            <a href="projects.html" class="btn btn-outline"
-              >View All Projects</a
-            >
-          </div>
+        <div class="hero-image">
+          <img src="../Assets/Profile Pic 2.jpeg" alt="Phiwe Bhengu" />
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <div class="modal-overlay" id="modal-overlay">
-      <button class="modal-close" id="modal-close" aria-label="Close">
-        &times;
-      </button>
-      <img src="" alt="" class="modal-content" id="modal-img" />
-    </div>
+    <!-- ===== FEATURED PROJECTS — all 3, centred ===== -->
+    <section class="featured">
+      <div class="container">
+        <div class="section-header">
+          <p class="overline">Selected Work</p>
+          <h2>Featured Projects</h2>
+        </div>
 
-    <div id="footer-placeholder"></div>
-    <script src="script.js"></script>
-  </body>
+        <div class="project-grid featured-three">
+
+          <!-- Project 1 — A Very Simple Platformer -->
+          <div class="project-card">
+            <img src="../Assets/Project 1.png" alt="A Very Simple Platformer"
+              class="card-image lightbox-trigger" />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Game Jam</span>
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+              </div>
+              <h3>A Very Simple Platformer</h3>
+              <p>
+                A 2D platformer built in 48 hours for the ARCADEMIA 2026 Game Jam.
+                We won First Place across five international universities.
+              </p>
+              <div class="card-actions">
+                <a href="project-detail.html" class="btn btn-outline btn-sm">Case Study</a>
+                <a href="https://mzati0.itch.io/a-very-simple-platformer"
+                  class="btn btn-primary btn-sm" target="_blank" rel="noopener">Itch.io</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 — The Bogs Woods -->
+          <div class="project-card">
+            <img src="../Assets/Project 2.jpeg" alt="The Bogs Woods"
+              class="card-image lightbox-trigger" />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Game Design</span>
+                <span class="tag">Hack &amp; Slash</span>
+                <span class="tag">Unity</span>
+              </div>
+              <h3>The Bogs Woods</h3>
+              <p>
+                A single-player hack-and-slash adventure through a supernatural world.
+                Help Otto and Ruri recover shattered soul fragments across the Celestial lands.
+              </p>
+              <div class="card-actions">
+                <a href="project-detail-bogs.html" class="btn btn-outline btn-sm">Case Study</a>
+                <a href="https://mzati0.itch.io/the-bogs-woods"
+                  class="btn btn-primary btn-sm" target="_blank" rel="noopener">Itch.io</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 — Platformer Prototype -->
+          <div class="project-card">
+            <img src="../Assets/Project 3.png" alt="Platformer Prototype"
+              class="card-image lightbox-trigger" />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Game Design</span>
+                <span class="tag">Unity</span>
+                <span class="tag">C#</span>
+              </div>
+              <h3>Platformer Prototype</h3>
+              <p>
+                A class assignment prototype demonstrating enemy AI, patrol logic,
+                and player interaction systems built from scratch in Unity.
+              </p>
+              <div class="card-actions">
+                <a href="project-detail-prototype.html" class="btn btn-outline btn-sm">Case Study</a>
+                <a href="https://github.com/phiwebhengu/DIGA3001A---Game-Design-IIIA-2026-SM1.git"
+                  class="btn btn-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="projects.html" class="btn btn-outline">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <img src="" alt="" class="modal-content" id="modal-img" />
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="../JavaScript/script.js"></script>
+</body>
 </html>
