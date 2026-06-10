@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap");
 
-/* CSS VARIABLES (PRD Color System) */
+/* === CSS VARIABLES (PRD Color System) === */
 :root {
   --bg: #ffffff;
   --text: #1a1a1a;
@@ -13,7 +13,7 @@
   --radius: 0.75rem;
 }
 
-/* RESET */
+/* === RESET === */
 *,
 *::before,
 *::after {
@@ -48,15 +48,16 @@ button {
   cursor: pointer;
 }
 
-/* CONTAINER */
+/* === CONTAINER === */
 .container {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* NAVIGATION  (Interaction 1 — injected via script.js) */
-
+/* ============================================================
+   NAVIGATION  (Interaction 1 — injected via script.js)
+   ============================================================ */
 nav {
   position: fixed;
   top: 0;
@@ -156,8 +157,9 @@ main {
   padding-top: var(--nav-h);
 }
 
-/* BUTTONS */
-
+/* ============================================================
+   BUTTONS
+   ============================================================ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -193,8 +195,9 @@ main {
   font-size: 0.8rem;
 }
 
-/* TAGS */
-
+/* ============================================================
+   TAGS
+   ============================================================ */
 .tag {
   display: inline-block;
   font-size: 0.68rem;
@@ -207,8 +210,9 @@ main {
   border-radius: 999px;
 }
 
-/* SECTION HEADER */
-
+/* ============================================================
+   SECTION HEADER (reusable)
+   ============================================================ */
 .section-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -255,7 +259,6 @@ main {
 /* ============================================================
    HOME — HERO
    ============================================================ */
-
 .hero {
   min-height: calc(100vh - var(--nav-h));
   display: flex;
@@ -395,7 +398,6 @@ main {
 /* ============================================================
    FILTER BAR  (Interaction 2)
    ============================================================ */
-
 .filter-bar {
   display: flex;
   gap: 0.6rem;
@@ -821,4 +823,9 @@ footer {
   border: none;
   border-top: 1px solid var(--border);
   margin: 3.5rem 0;
+}
+
+/* Home page — force 3-column featured grid */
+.featured-three {
+  grid-template-columns: repeat(3, 1fr);
 }

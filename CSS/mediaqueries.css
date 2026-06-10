@@ -43,6 +43,11 @@
   .project-meta-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* Tablet — collapse featured-three to 1 col */
+@media screen and (max-width: 900px) {
+  .featured-three { grid-template-columns: 1fr; }
+}
+
 /* Mobile — 600px */
 @media screen and (max-width: 600px) {
   .container { padding: 0 1.25rem; }
