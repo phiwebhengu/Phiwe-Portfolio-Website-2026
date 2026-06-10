@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Bogs Woods — Phiwe Bhengu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main>
+    <section class="page-section">
+      <div class="container" style="max-width:860px;">
+
+        <div style="margin-bottom:2rem;">
+          <a href="projects.html" class="btn btn-outline btn-sm">&#8592; Back to Projects</a>
+        </div>
+
+        <div class="card-tags" style="margin-bottom:0.75rem;">
+          <span class="tag">Game Design</span>
+          <span class="tag">Hack &amp; Slash</span>
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+        </div>
+
+        <h1 style="font-size:2.25rem; font-weight:700; letter-spacing:-0.02em; margin-bottom:0.5rem;">
+          The Bogs Woods
+        </h1>
+        <p style="color:var(--muted); margin-bottom:2.5rem;">
+          Class Assignment &bull; Group Project &bull; Single-player Hack-and-Slash Adventure
+        </p>
+
+        <!-- Hero Image — Title Screen -->
+        <img src="./Assets/TheBogsWoods3.png" alt="The Bogs Woods title screen"
+          class="project-detail-hero lightbox-trigger" />
+
+        <!-- Meta Panel -->
+        <div class="project-meta-grid">
+          <div class="meta-item">
+            <div class="meta-label">My Role</div>
+            <div class="meta-value">Game Developer &amp; Technical Artist</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Tools</div>
+            <div class="meta-value">Unity, C#, Visual Studio</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Platform</div>
+            <div class="meta-value">Itch.io (WebGL)</div>
+          </div>
+        </div>
+
+        <!-- The Challenge / The Solution -->
+        <div class="process-grid">
+          <div class="process-block">
+            <h3>The Challenge</h3>
+            <p>
+              As a class assignment, our group had to design and ship a complete, 
+              polished game with a narrative core, real-time combat, and puzzle mechanics — 
+              all within a fixed academic timeline. The brief required a cohesive game world 
+              with distinct zones, enemy types, and a story-driven progression system that 
+              would feel meaningful to a player rather than mechanical.
+            </p>
+          </div>
+          <div class="process-block">
+            <h3>The Solution</h3>
+            <p>
+              We built a top-down hack-and-slash using Unity's 2D tools. As Game Developer 
+              and Technical Artist, I engineered the combat system, enemy hit detection, 
+              and the collectible soul fragment mechanic that drives the core gameplay loop. 
+              The game uses a state machine for enemy AI so each boss servant behaves 
+              distinctly, giving each encounter a unique tactical feel while keeping 
+              the codebase maintainable.
+            </p>
+          </div>
+        </div>
+
+        <!-- Story -->
+        <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.75rem;">The Story</h3>
+        <p style="color:var(--muted); font-size:0.95rem; line-height:1.8; margin-bottom:2rem;">
+          Two siblings — <strong style="color:var(--text);">Otto and Ruri</strong> — get 
+          transported into a supernatural world. Shortly after arriving, Otto is cursed, 
+          transformed into a monkey, and has his soul shattered into five pieces scattered 
+          across the lands. To turn him back to human, they must journey through unknown 
+          territories, battle powerful servants of the bog, solve puzzles, and explore the 
+          forgotten world of the Celestial civilization.
+        </p>
+
+        <!-- Screenshots -->
+        <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.75rem;">Screenshots</h3>
+        <div class="screenshot-grid" style="margin-bottom:2.5rem;">
+          <img src="./Assets/TheBogsWoods2.png" alt="The Bogs Woods gameplay — exploration"
+            class="lightbox-trigger" />
+          <img src="./Assets/TheBogsWoods1.png" alt="The Bogs Woods — narrative cutscene"
+            class="lightbox-trigger" />
+        </div>
+
+        <!-- Technical Implementation -->
+        <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.75rem;">
+          Technical Implementation
+        </h3>
+        <p style="color:var(--muted); font-size:0.875rem; margin-bottom:1rem;">
+          Core melee combat script — handles attack input, OverlapCircle hit detection, 
+          and damage application to enemy health components.
+        </p>
+
+        <div class="code-block">
+          <pre>// CombatSystem.cs
+using System.Collections;
+using UnityEngine;
+
+public class CombatSystem : MonoBehaviour
+{
+    [SerializeField] private float attackRange  = 1.5f;
+    [SerializeField] private int   attackDamage = 10;
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private Transform attackPoint;
+
+    private Animator animator;
+    private bool isAttacking = false;
+
+    void Start()
+    {
+        animator = GetComponent&lt;Animator&gt;();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z) &amp;&amp; !isAttacking)
+            StartCoroutine(PerformAttack());
+    }
+
+    IEnumerator PerformAttack()
+    {
+        isAttacking = true;
+        animator.SetTrigger("Attack");
+
+        // Detect all enemies in melee range
+        Collider2D[] hits = Physics2D.OverlapCircleAll(
+            attackPoint.position, attackRange, enemyLayer
+        );
+
+        foreach (Collider2D hit in hits)
+        {
+            EnemyHealth enemy = hit.GetComponent&lt;EnemyHealth&gt;();
+            if (enemy != null)
+                enemy.TakeDamage(attackDamage);
+        }
+
+        yield return new WaitForSeconds(0.4f);
+        isAttacking = false;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+}</pre>
+        </div>
+
+        <!-- Links -->
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem;">
+          <a href="https://mzati0.itch.io/the-bogs-woods"
+            class="btn btn-primary" target="_blank" rel="noopener">Play on Itch.io</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <img src="" alt="" class="modal-content" id="modal-img" />
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>

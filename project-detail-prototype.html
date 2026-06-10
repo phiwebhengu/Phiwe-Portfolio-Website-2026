@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Platformer Prototype — Phiwe Bhengu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main>
+    <section class="page-section">
+      <div class="container" style="max-width:860px;">
+
+        <div style="margin-bottom:2rem;">
+          <a href="projects.html" class="btn btn-outline btn-sm">&#8592; Back to Projects</a>
+        </div>
+
+        <div class="card-tags" style="margin-bottom:0.75rem;">
+          <span class="tag">Game Design</span>
+          <span class="tag">Precision Platformer</span>
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+        </div>
+
+        <h1 style="font-size:2.25rem; font-weight:700; letter-spacing:-0.02em; margin-bottom:0.5rem;">
+          Platformer Prototype
+        </h1>
+        <p style="color:var(--muted); margin-bottom:2.5rem;">
+          DIGA3001A Game Design IIIA &bull; Exam Assignment &bull; Two-Build Design Investigation
+        </p>
+
+        <!-- Hero Image -->
+        <img src="./Assets/Project 3.png" alt="Platformer Prototype gameplay"
+          class="project-detail-hero lightbox-trigger" />
+
+        <!-- Meta Panel -->
+        <div class="project-meta-grid">
+          <div class="meta-item">
+            <div class="meta-label">Genre</div>
+            <div class="meta-value">2D Precision Platformer</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Tools</div>
+            <div class="meta-value">Unity, C#, Visual Studio</div>
+          </div>
+          <div class="meta-item">
+            <div class="meta-label">Builds</div>
+            <div class="meta-value">Original Prototype + Exam Build</div>
+          </div>
+        </div>
+
+        <!-- Design Interrogation -->
+        <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.75rem;">
+          Design Interrogation
+        </h3>
+        <p style="color:var(--muted); font-size:0.95rem; line-height:1.8; margin-bottom:1rem;">
+          This project is a design investigation into the relationship between 
+          <strong style="color:var(--text);">time pressure, movement behaviour, 
+          and route optimisation</strong> within a system defined entirely by traversal 
+          mechanics. Rather than generating challenge through combat or enemy encounters, 
+          the prototype isolates movement and temporal constraint as the primary forces 
+          shaping player experience.
+        </p>
+        <p style="color:var(--muted); font-size:0.95rem; line-height:1.8; margin-bottom:2rem;">
+          The central hypothesis asks: <em style="color:var(--text);">how does a countdown 
+          timer transform movement mechanics from functional navigation tools into systems 
+          of strategic decision-making and performance optimisation?</em>
+        </p>
+
+        <!-- Challenge / Solution -->
+        <div class="process-grid">
+          <div class="process-block">
+            <h3>The Challenge</h3>
+            <p>
+              Design a game whose entire challenge emerges from the interaction 
+              between a layered movement system and a countdown timer — with no 
+              enemies, no combat, and no narrative obstacles. The player must 
+              collect a required number of crystals before the timer expires, 
+              forcing them to weigh movement speed against precision across 
+              a three-level progression. A player who moves slowly may collect 
+              all crystals but fail on time. A player who moves recklessly may 
+              waste time recovering from errors.
+            </p>
+          </div>
+          <div class="process-block">
+            <h3>The Solution</h3>
+            <p>
+              The movement system layers six mechanics — horizontal movement, 
+              jumping, double-jumping, wall sliding, wall jumping, and dashing — 
+              whose individual value is determined entirely by the timer. This 
+              transforms traversal from navigation into strategy. The examination 
+              build expanded the communicative layer with a full audio system, 
+              per-second countdown warnings, a globally managed pause that freezes 
+              physics and timer simultaneously, and event-driven architecture for 
+              crystal collection and level transitions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Build Comparison -->
+        <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:1rem;">
+          Build Comparison
+        </h3>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:2.5rem;">
+          <div style="background:var(--neutral); border-radius:var(--radius); padding:1.5rem;">
+            <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem;">
+              Original Prototype
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+              <li style="font-size:0.875rem; color:var(--muted); display:flex; gap:0.5rem;">
+                <span style="color:var(--accent); flex-shrink:0;">&#10003;</span>
+                Movement system foundation
+              </li>
+              <li style="font-size:0.875rem; color:var(--muted); display:flex; gap:0.5rem;">
+                <span style="color:var(--accent); flex-shrink:0;">&#10003;</span>
+                Crystal collection mechanic
+              </li>
+              <li style="font-size:0.875rem; color:var(--muted); display:flex; gap:0.5rem;">
+                <span style="color:var(--accent); flex-shrink:0;">&#10003;</span>
+                Countdown timer system
+              </li>
+              <li style="font-size:0.875rem; color:var(--muted); display:flex; gap:0.5rem;">
+                <span style="color:var(--accent); flex-shrink:0;">&#10003;</span>
+                Three-level progression
+              </li>
+            </ul>
+          </div>
+          <div style="background:var(--neutral); border-radius:var(--radius); padding:1.5rem;">
+            <p style="font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem;">
+              Examination Build
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem;">
+              <li style="font-size:0.875rem; color:var(--muted); display:flex; gap:0.5rem;">
+                <span style="color:var(--accent); flex-shrink:0;">&#10003;</span>
+                Spatial audio + scene music system
+              </li>
+              <li style="font-size:0.875rem; color:var(--muted); display:flex; gap:0.5rem;">
+                <span style="color:var(--accent); flex-shrink:0;">&#10003;</span>
+                Per-second countdown audio (final 10s)
+              </li>
+              <li style="font-size:0.875rem; color:var(--muted); display:flex; gap:0.5rem;">
+                <span style="color:var(--accent); flex-shrink:0;">&#10003;</span>
+                Global pause (freezes physics + timer)
+              </li>
+              <li style="font-size:0.875rem; color:var(--muted); display:flex; gap:0.5rem;">
+                <span style="color:var(--accent); flex-shrink:0;">&#10003;</span>
+                Sine-wave flashing timer UI warning
+              </li>
+              <li style="font-size:0.875rem; color:var(--muted); display:flex; gap:0.5rem;">
+                <span style="color:var(--accent); flex-shrink:0;">&#10003;</span>
+                Event-driven crystal &amp; level architecture
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Code — Movement System -->
+        <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:0.75rem;">
+          Technical Implementation
+        </h3>
+        <p style="color:var(--muted); font-size:0.875rem; margin-bottom:1rem;">
+          Player movement controller — six-mechanic layered system: horizontal movement,
+          jump, double-jump, wall slide, wall jump, and dash.
+        </p>
+
+        <div class="code-block">
+          <pre>// PlayerMovement.cs
+using System.Collections;
+using UnityEngine;
+
+public class PlayerMovement : MonoBehaviour
+{
+    [Header("Movement")]
+    [SerializeField] private float moveSpeed     = 8f;
+    [SerializeField] private float jumpForce     = 14f;
+    [SerializeField] private float dashForce     = 20f;
+    [SerializeField] private float dashDuration  = 0.15f;
+    [SerializeField] private float wallSlideSpeed = 2f;
+
+    [Header("Detection")]
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private Transform wallCheck;
+
+    private Rigidbody2D rb;
+    private bool isGrounded, isTouchingWall, isWallSliding;
+    private int  jumpsRemaining = 2;   // 2 = double-jump allowed
+    private bool canDash  = true;
+    private bool isDashing = false;
+
+    void Start() => rb = GetComponent&lt;Rigidbody2D&gt;();
+
+    void Update()
+    {
+        if (isDashing) return;
+        CheckCollisions();
+        HandleMovement();
+        HandleJump();
+        HandleWallSlide();
+        HandleDash();
+    }
+
+    void CheckCollisions()
+    {
+        isGrounded     = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+        isTouchingWall = Physics2D.OverlapCircle(wallCheck.position,   0.1f, wallLayer);
+        if (isGrounded) { jumpsRemaining = 2; canDash = true; }
+    }
+
+    void HandleMovement()
+    {
+        float x = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(x * moveSpeed, rb.velocity.y);
+    }
+
+    void HandleJump()
+    {
+        if (Input.GetButtonDown("Jump") &amp;&amp; isWallSliding)
+        {
+            // Wall jump: push away from wall
+            float dir = isTouchingWall ? -transform.localScale.x : transform.localScale.x;
+            rb.velocity = new Vector2(dir * moveSpeed, jumpForce);
+            return;
+        }
+        if (Input.GetButtonDown("Jump") &amp;&amp; jumpsRemaining &gt; 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpsRemaining--;
+        }
+    }
+
+    void HandleWallSlide()
+    {
+        isWallSliding = isTouchingWall &amp;&amp; !isGrounded &amp;&amp; rb.velocity.y &lt; 0;
+        if (isWallSliding)
+            rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
+    }
+
+    void HandleDash()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) &amp;&amp; canDash)
+            StartCoroutine(Dash());
+    }
+
+    IEnumerator Dash()
+    {
+        isDashing = true;
+        canDash   = false;
+        float dir = transform.localScale.x;
+        rb.velocity     = new Vector2(dir * dashForce, 0f);
+        rb.gravityScale = 0f;
+        yield return new WaitForSeconds(dashDuration);
+        rb.gravityScale = 3f;
+        isDashing = false;
+    }
+}</pre>
+        </div>
+
+        <!-- Code — Countdown Timer -->
+        <p style="color:var(--muted); font-size:0.875rem; margin-bottom:1rem; margin-top:1.75rem;">
+          Countdown timer — per-second audio warning in the final 10 seconds, 
+          UnityEvent hook for expiry, and pause/resume control used by the global
+          pause manager.
+        </p>
+
+        <div class="code-block">
+          <pre>// CountdownTimer.cs
+using System;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class CountdownTimer : MonoBehaviour
+{
+    [SerializeField] private float     startTime    = 60f;
+    [SerializeField] private AudioClip warningBeep;
+
+    public UnityEvent onTimerExpired;
+    public static event Action&lt;float&gt; OnTimeChanged;
+
+    private float       currentTime;
+    private bool        isRunning = true;
+    private AudioSource audioSource;
+    private int         lastSecond;
+
+    void Start()
+    {
+        currentTime  = startTime;
+        lastSecond   = Mathf.CeilToInt(currentTime);
+        audioSource  = GetComponent&lt;AudioSource&gt;();
+    }
+
+    void Update()
+    {
+        if (!isRunning) return;
+
+        currentTime -= Time.deltaTime;
+        OnTimeChanged?.Invoke(currentTime);
+
+        // Per-second beep in final 10 seconds
+        int currentSecond = Mathf.CeilToInt(currentTime);
+        if (currentTime &lt;= 10f &amp;&amp; currentSecond != lastSecond)
+        {
+            audioSource.PlayOneShot(warningBeep);
+            lastSecond = currentSecond;
+        }
+
+        if (currentTime &lt;= 0f)
+        {
+            currentTime = 0f;
+            isRunning   = false;
+            onTimerExpired.Invoke();
+        }
+    }
+
+    public void Pause()  =&gt; isRunning = false;
+    public void Resume() =&gt; isRunning = true;
+}</pre>
+        </div>
+
+        <!-- Links -->
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.75rem;">
+          <a href="https://github.com/phiwebhengu/DIGA3001A---Game-Design-IIIA-2026-SM1.git"
+            class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <img src="" alt="" class="modal-content" id="modal-img" />
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>
